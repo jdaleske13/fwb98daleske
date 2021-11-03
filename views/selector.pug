@@ -3,4 +3,8 @@ extends layout
 block content
   h1= title
   p This is Daleske's website #{title}
-  
+  - var image_names = ['coke.jpg', 'drpepper.jpg', 'mtdew.jpg', 'pepsi.jpg', 'sprite.jpg']
+  - for(let i=0; i<3; i++){
+    imgs= image_names[Math.floor(Math.random()*5)]
+    img(src="public/images/"+imgs, alt=imgs, height='300px', width='300px')
+  -}
